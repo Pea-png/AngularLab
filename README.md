@@ -1,7 +1,11 @@
 ## Angular Practice Project
-
-A hands-on Angular project to practice component architecture, data binding, routing, and reactive forms.
-Organized components under src/app/components/*, demonstrates @Input / @Output, page navigation with <router-outlet>, and user input handling with ReactiveFormsModule
+Hands-on project to practice core Angular skills:
+- Component Architecture: Components organized under src/app/components/* for a clean AppComponent structure.
+- Data Binding: Demonstrates @Input and @Output communication between TS and HTML.
+- Routing: Page navigation implemented via app-routing.module.ts and <router-outlet>.
+- Forms & Validation: contact-form component using ReactiveFormsModule for user input and validation.
+- # Skills Gained: Strengthens practical skills in building maintainable and scalable Angular applications.
+  
 ## Development server
 
 To start a local development server, run:
