@@ -4,7 +4,7 @@ Hands-on project to practice core Angular skills:
 - Data Binding: Demonstrates @Input and @Output communication between TS and HTML.
 - Routing: Page navigation implemented via app-routing.module.ts and <router-outlet>.
 - Forms & Validation: contact-form component using ReactiveFormsModule for user input and validation.
-- # Skills Gained: Strengthens practical skills in building maintainable and scalable Angular applications.
+- Skills Gained: Strengthens practical skills in building maintainable and scalable Angular applications.
   
 ## Development server
 
