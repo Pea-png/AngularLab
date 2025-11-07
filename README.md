@@ -1,4 +1,4 @@
-Angular Practice Project
+## Angular Practice Project
 
 A hands-on Angular project to practice component architecture, data binding, routing, and reactive forms.
 Organized components under src/app/components/*, demonstrates @Input / @Output, page navigation with <router-outlet>, and user input handling with ReactiveFormsModule
