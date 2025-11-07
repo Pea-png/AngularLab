@@ -1,0 +1,84 @@
+  <main class="flex flex-col flex-1  w-full h-screen gap-4">
+   
+
+    <!-- Heading -->
+    <div class="w-128 flex flex-col p-4 bg-white m-4 rounded-xl shadow-md h-full space-y-6">
+      <div class="flex gap-2 items-center px-4  ">
+        <h1 class="text-lg font-normal text-[#232649] ">คำสั่งซื้อรอจัดส่ง</h1>
+        <p class="text-sm text-gray-400">
+          (แสดงคำสั่งซื้อที่ยืนยันแล้วอยู่ในขั้นตอนการเตรียมพัสดุเพื่อจัดส่ง คำสั่งซื้อที่มีสถานะรับพัสดุหรือ จ่ายเงิน COD จะถูกนำไปแสดงที่หน้าคำสั่งซื้อสำเร็จ)
+        </p>
+      </div>
+
+      <!-- Filter Section -->
+      <section class="flex gap-2 px-4">
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">ช่องทางที่จะแสดง</label>
+         <!-- Dropdown -->
+    <div class="relative inline-block text-left customDropdown">
+      <button
+        (click)="toggleDropdown()"
+        class="dropdownButton inline-flex items-center justify-between w-44 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-normal text-gray-500 hover:bg-gray-50 focus:outline-none">
+        <span class="selectedOption">{{ selectedOption }}</span>
+        <svg class="dropdownArrow w-4 h-4 ml-2 transition-transform duration-200 text-gray-500"
+          [ngClass]="{ 'rotate-180': isDropdownOpen }"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- เมนู dropdown -->
+      <div *ngIf="isDropdownOpen"
+           class="absolute right-0 mt-2 w-44 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+        <ul class="py-1 text-sm text-gray-700" role="menu">
+          <li><button (click)="selectOption('Facebook')" class="block w-full text-left px-4 py-2 hover:bg-[#D8EEFC]">Facebook</button></li>
+          <li><button (click)="selectOption('TikTok')" class="block w-full text-left px-4 py-2 hover:bg-[#D8EEFC]">Tik Tok</button></li>
+          <li><button (click)="selectOption('Order3')" class="block w-full text-left px-4 py-2 hover:bg-[#D8EEFC]">Website</button></li>
+        </ul>
+      </div>
+    </div>
+        </div>
+
+
+<div>
+  <label class="block text-sm text-gray-600 mb-1">ระยะเวลา</label>
+  <input 
+    type="text" 
+    class="border rounded-md px-3 py-2 text-sm w-60"
+    [value]="orders[0].date | formatDate"
+    placeholder="วันที่เริ่มต้น – วันที่สิ้นสุด" />
+</div>
+
+
+      </section>
+
+      <!-- Steps -->
+<section class="flex items-center gap-4 px-4">
+  <!-- Step1 -->
+  <div class="flex items-center gap-2 relative bg-[#8B92E5] px-4 py-2 rounded-full shadow-sm ">
+    <span class="flex justify-center items-center w-6 h-6 bg-white rounded-full font-normal text-[#8B92E5] text-sm z-10">1</span>
+    <span class="font-normal text-white text-sm">สร้างเลขพัสดุ</span>
+    <!-- เส้นเชื่อมไป Step2 -->
+    <div class="absolute top-1/2 left-full w-8 h-[2px] bg-gray-300 -translate-y-1/2"></div>
+  </div>
+
+  <!-- Step2 -->
+  <div class="flex items-center gap-2 relative bg-[#8B92E5] px-4 py-2 rounded-full shadow-sm">
+    <span class="flex justify-center items-center w-6 h-6 bg-white rounded-full font-normal text-[#8B92E5] text-sm z-10">2</span>
+    <span class="font-normal text-white text-sm">แจ้งเตือนเลขพัสดุ</span>
+    <!-- เส้นเชื่อมไป Step3 -->
+    <div class="absolute top-1/2 left-full w-8 h-[2px] bg-gray-300 -translate-y-1/2"></div>
+  </div>
+
+  <!-- Step3 -->
+  <div class="flex items-center gap-2 relative bg-[#8B92E5] px-4 py-2 rounded-full shadow-sm">
+    <span class="flex justify-center items-center w-6 h-6 bg-white rounded-full font-normal text-[#8B92E5] text-sm z-10">3</span>
+    <span class="font-normal text-white text-sm">พิมพ์ใบส่งของ</span>
+  </div>
+</section>
+
+      <!-- Table -->
+<app-table [rows]="orders"></app-table>
+    </div>
+  </main>
