@@ -1,7 +1,7 @@
-# MyProject
+Angular Practice Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
-
+A hands-on Angular project to practice component architecture, data binding, routing, and reactive forms.
+Organized components under src/app/components/*, demonstrates @Input / @Output, page navigation with <router-outlet>, and user input handling with ReactiveFormsModule
 ## Development server
 
 To start a local development server, run:
