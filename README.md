@@ -2,7 +2,7 @@
 Hands-on project to practice core Angular skills:
 - Component Architecture: Components organized under src/app/components/* for a clean AppComponent structure.
 - Data Binding: Demonstrates @Input and @Output communication between TS and HTML.
-- Routing: Page navigation implemented via app-routing.module.ts and <router-outlet>.
+- Routing: Page navigation implemented via app-routing.ts and <router-outlet>.
 - Forms & Validation: contact-form component using ReactiveFormsModule for user input and validation.
 - Skills Gained: Strengthens practical skills in building maintainable and scalable Angular applications.
   
